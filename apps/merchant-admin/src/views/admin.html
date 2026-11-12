@@ -4923,7 +4923,7 @@
 
     function updateLiveWhiteLabelPreview() {
       const bName = document.getElementById('settingBusinessName')?.value.trim() || 'Merchant Checkout';
-      const appName = document.getElementById('settingAppName')?.value.trim() || '{{APP_NAME}}' || 'YOUPI PG';
+      const appName = document.getElementById('settingAppName')?.value.trim() || '{{APP_NAME}}' || 'StandaloneCoders';
       const logoUrl = document.getElementById('settingLogoUrl')?.value.trim() || '';
       const primaryColor = document.getElementById('settingPrimaryColor')?.value.trim() || '#0b63e5';
       const headerTheme = document.getElementById('settingHeaderTheme')?.value || 'gradient';
@@ -5089,7 +5089,7 @@
           setVal('settingWebhookSecret', mData.webhookSecret);
           renderMerchantCredentials(mData);
 
-          setVal('settingAppName', branding.appName || '{{APP_NAME}}' || 'YOUPI PG');
+          setVal('settingAppName', branding.appName || '{{APP_NAME}}' || 'StandaloneCoders');
           setVal('settingLogoUrl', branding.logoUrl);
           setVal('settingSidebarNotice', branding.sidebarNotice);
           setVal('settingFooterGuarantee', branding.footerGuarantee);
@@ -5267,7 +5267,7 @@
     async function saveMerchantBrandingAndToggles() {
       settingsLoaded = true;
       const businessName = document.getElementById('settingBusinessName')?.value.trim() || '';
-      const appName = document.getElementById('settingAppName')?.value.trim() || '{{APP_NAME}}' || 'YOUPI PG';
+      const appName = document.getElementById('settingAppName')?.value.trim() || '{{APP_NAME}}' || 'StandaloneCoders';
       const logoUrl = document.getElementById('settingLogoUrl')?.value.trim() || '';
       const primaryColor = document.getElementById('settingPrimaryColor')?.value.trim() || '#0b63e5';
       const sidebarNotice = document.getElementById('settingSidebarNotice')?.value.trim() || (currentMerchantBranding?.sidebarNotice || '');

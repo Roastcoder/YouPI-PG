@@ -222,7 +222,7 @@ export class CheckoutServer {
     let html = this.loadTemplateWithPartials();
 
     const appName = state?.branding?.appName || (process.env.DEFAULT_APP_NAME || '').trim() || 'YouPI PG';
-    const primaryColor = state?.branding?.primaryColor || (process.env.DEFAULT_PRIMARY_COLOR || '').trim() || '#0b63e5';
+    const primaryColor = state?.branding?.primaryColor || (process.env.DEFAULT_PRIMARY_COLOR || '').trim() || '#101211';
     const merchantName = state?.merchantName || 'Merchant Checkout';
     const orderId = state?.orderId || '';
     const logoUrl = state?.branding?.logoUrl || (process.env.DEFAULT_LOGO_URL || '').trim() || '';
@@ -415,7 +415,7 @@ export class CheckoutServer {
         const businessName = url.searchParams.get('name') || process.env.DEFAULT_APP_NAME || 'Merchant Store';
         const payeeVpa = url.searchParams.get('vpa') || process.env.DEFAULT_PAYEE_VPA || 'customer@ybl';
         const phonePeMobile = url.searchParams.get('mobile') || process.env.PHONEPE_REGISTERED_MOBILE || '';
-        const primaryColor = url.searchParams.get('color') || process.env.DEFAULT_PRIMARY_COLOR || '#5f259f';
+        const primaryColor = url.searchParams.get('color') || process.env.DEFAULT_PRIMARY_COLOR || '#101211';
 
         const rendered = template
           .replaceAll('{{BUSINESS_NAME}}', escapeHtml(businessName))
@@ -440,7 +440,7 @@ export class CheckoutServer {
         const payeeVpa = url.searchParams.get('vpa') || process.env.DEFAULT_PAYEE_VPA || 'customer@ybl';
         const phonePeMobile = url.searchParams.get('mobile') || process.env.PHONEPE_REGISTERED_MOBILE || '';
         const payeeName = url.searchParams.get('payee') || '';
-        const primaryColor = url.searchParams.get('color') || process.env.DEFAULT_PRIMARY_COLOR || '#5f259f';
+        const primaryColor = url.searchParams.get('color') || process.env.DEFAULT_PRIMARY_COLOR || '#101211';
         const format = url.searchParams.get('format') || 'table-tent';
         const theme = url.searchParams.get('theme') || (businessName.toLowerCase().includes('cracker') ? 'diwali' : 'standard');
         const poweredBy = url.searchParams.get('poweredBy') || '';
@@ -477,7 +477,7 @@ export class CheckoutServer {
         const format = url.searchParams.get('format') || 'table-tent';
         const theme = url.searchParams.get('theme') || (businessName.toLowerCase().includes('cracker') ? 'diwali' : 'standard');
         const poweredBy = url.searchParams.get('poweredBy') || '';
-        const primaryColor = url.searchParams.get('color') || process.env.DEFAULT_PRIMARY_COLOR || '#5f259f';
+        const primaryColor = url.searchParams.get('color') || process.env.DEFAULT_PRIMARY_COLOR || '#101211';
 
         let amountPaise = null;
         if (amountStr && mode !== 'static') {

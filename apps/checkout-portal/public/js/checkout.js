@@ -1508,7 +1508,7 @@
 
     function applyDynamicTheme(branding) {
       if (!branding) return;
-      const primary = branding.primaryColor || '#0b63e5';
+      const primary = branding.primaryColor || '#101211';
       const darkPrimary = adjustHexColor(primary, -25);
       const root = document.documentElement;
 
@@ -1552,8 +1552,8 @@
     function renderState(data) {
       state = data;
       const b = data.branding || {};
-      const appName = (b.appName && b.appName !== 'YOUPI PG') ? b.appName : 'Mitto Pay';
-      const merchantName = (data.merchantName && data.merchantName !== 'YOUPI Demo Store' && data.merchantName !== 'Merchant Checkout') ? data.merchantName : 'V-Visa Business';
+      const appName = (b.appName && b.appName !== 'YOUPI PG') ? b.appName : 'StandaloneCoders';
+      const merchantName = (data.merchantName && data.merchantName !== 'YOUPI Demo Store' && data.merchantName !== 'Merchant Checkout') ? data.merchantName : 'StandaloneCoders';
 
       // 1. Dynamic Title
       document.title = `${merchantName} · ${appName} Checkout`;
@@ -1795,7 +1795,7 @@
         if (splashDefaultShield) splashDefaultShield.style.display = 'none';
       }
       if (splashSecuredText) {
-        splashSecuredText.textContent = b.hidePoweredBy ? (b.appName || '256-Bit Bank Encryption') : (b.appName || 'Mitto Pay');
+        splashSecuredText.textContent = b.hidePoweredBy ? (b.appName || '256-Bit Bank Encryption') : (b.appName || 'StandaloneCoders');
       }
 
       // 12. Legal Disclaimer Strip
@@ -2304,7 +2304,7 @@
     }
 
     // --- RAZORPAY AUTHENTIC "PROCESSING YOUR PAYMENT" MODAL SHEET ---
-    function openProcessingModal(title = 'Processing payment securely with Mitto Pay', subtitle = 'Bank verification in progress. Please do not close or refresh this window.') {
+    function openProcessingModal(title = 'Processing payment securely with StandaloneCoders', subtitle = 'Bank verification in progress. Please do not close or refresh this window.') {
       const modal = document.getElementById('rzpProcessingModal');
       const tEl = document.getElementById('rzpProcessingTitle');
       const sEl = document.getElementById('rzpProcessingSubtitle');
@@ -2410,7 +2410,7 @@
 
     // --- MANUAL PAYMENT DONE VERIFICATION ---
     async function submitPaymentDone() {
-      openProcessingModal('Processing payment securely with Mitto Pay', 'Bank verification in progress. Please do not close or refresh this window.');
+      openProcessingModal('Processing payment securely with StandaloneCoders', 'Bank verification in progress. Please do not close or refresh this window.');
       emitTriggerHook('PAYMENT_DONE_CLICKED');
 
       try {
@@ -2725,10 +2725,10 @@
 
       const emails = (info && info.supportEmails && info.supportEmails.length > 0)
         ? info.supportEmails
-        : ['support@vvisa.in'];
+        : ['Roastcoder@gmail.com'];
       const phones = (info && info.supportMobiles && info.supportMobiles.length > 0)
         ? info.supportMobiles
-        : ['+91 8610648309'];
+        : ['+91 6378110608'];
 
       if (emailBox) {
         emailBox.innerHTML = `<strong>Email:</strong> ${emails.join(', ')}`;
