@@ -248,7 +248,7 @@ describe('Checkout Portal Integration Tests', () => {
 
       assert.ok(html.includes('CustomPay Gateway Checkout'));
       assert.ok(html.includes('CustomPay Gateway Verified Business'));
-      assert.ok(html.includes('200+ orders verified this month by CustomPay Gateway'));
+      assert.ok(html.includes('Verified &amp; Protected by CustomPay Gateway'));
       assert.ok(html.includes('CustomPay Gateway Help &amp; Support'));
 
       process.env = { ...origEnv };
